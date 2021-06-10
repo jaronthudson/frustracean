@@ -89,6 +89,7 @@ An example of code interacting with the graphics framework:
             }
 
         }
+        
 This code is for one of the buttons on the screen. The location is hard-coded: this code is checked when the
 mouse button is pressed. If the location of the mouse pointer matches up with the location of the button, then
 the code within is run. It checks to see if the language shown at the button matches up with the actual language
