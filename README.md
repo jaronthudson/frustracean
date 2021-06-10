@@ -44,29 +44,51 @@ one of the examples (https://github.com/QuantumBadger/Speedy2D/blob/master/examp
 use some of the variable names and basic setup, and with that figured out how different things worked.
 
 An example of code interacting with the graphics framework:
-        //button 3
-        if (self.mouse_pos.x > 700.0)
-            && (self.mouse_pos.x < 1100.0)
-            && (self.mouse_pos.y > 450.0)
-            && (self.mouse_pos.y < 550.0)
-        {
-            if self.lang_3 == self.actual_lang {
-                //update score if not on the start screen
-                if self.actual_lang.0 != (*"1") {
-                    self.correct += 1;
-                }
-                MyWindowHandler::reset_lang(self);
-                if self.color_mouse {
-                    MyWindowHandler::change_mouse_color(self);
-                }
-            } else {
-                self.lang_3 = ("null".to_string(), "Nope!".to_string());
-                //if not on the start screen
-                if self.actual_lang.0 != (*"1") {
-                    self.incorrect += 1;
-                }
-            }
-        }
+//button 3
+
+        if (self.mouse_pos.x > 700.0)
+
+            && (self.mouse_pos.x < 1100.0)
+
+            && (self.mouse_pos.y > 450.0)
+
+            && (self.mouse_pos.y < 550.0)
+
+        {
+
+            if self.lang_3 == self.actual_lang {
+
+                //update score if not on the start screen
+
+                if self.actual_lang.0 != (*"1") {
+
+                    self.correct += 1;
+
+                }
+
+                MyWindowHandler::reset_lang(self);
+
+                if self.color_mouse {
+
+                    MyWindowHandler::change_mouse_color(self);
+
+                }
+
+            } else {
+
+                self.lang_3 = ("null".to_string(), "Nope!".to_string());
+
+                //if not on the start screen
+
+                if self.actual_lang.0 != (*"1") {
+
+                    self.incorrect += 1;
+
+                }
+
+            }
+
+        }
 This code is for one of the buttons on the screen. The location is hard-coded: this code is checked when the
 mouse button is pressed. If the location of the mouse pointer matches up with the location of the button, then
 the code within is run. It checks to see if the language shown at the button matches up with the actual language
