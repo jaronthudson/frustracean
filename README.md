@@ -3,6 +3,7 @@ Final Project: Frustracean
 https://github.com/jaronthudson/frustracean/
 MIT License: https://github.com/jaronthudson/frustracean/blob/main/LICENSE
 
+
 My project is a language guessing game. The basic idea is to generate random text from Wikipedia
 in one of fifty languages, then display the text along with four options for guessing the language.
 I chose 4 somewhat arbitrarily -- to make it not too difficult -- and it can be changed fairly
@@ -115,3 +116,8 @@ I didn't know about programming a game that runs in a game loop). This was the f
 (aside from 'Uno' in CS202) and the first program I've written that included working with any sort of graphics
 framework. It was a very good experience! I learned a lot and it was probably the most fun programming
 challenge that I've had. 
+
+
+//Note: there's an Easter Egg in the game: if you click the bottom right button while on
+the main screen, it enables the color-changing mouse cursor. I left this out from the default
+however because it can pause while waiting for the Wikipedia request.
