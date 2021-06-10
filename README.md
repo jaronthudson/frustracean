@@ -1,6 +1,6 @@
-Jeff Thomson
-Final Project: Frustracean
-https://github.com/jaronthudson/frustracean/
+Jeff Thomson \
+Final Project: Frustracean \
+https://github.com/jaronthudson/frustracean/ \
 MIT License: https://github.com/jaronthudson/frustracean/blob/main/LICENSE
 
 
