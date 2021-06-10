@@ -1,5 +1,5 @@
 Jeff Thomson \
-Final Project: Frustracean \
+Rust Final Project: Frustracean \
 https://github.com/jaronthudson/frustracean/ \
 MIT License: https://github.com/jaronthudson/frustracean/blob/main/LICENSE
 
@@ -22,7 +22,7 @@ to build: install rust, then run "cargo build" and "cargo run" in the main folde
 
 The behind-the-scenes language work uses the Wikipedia crates for connecting to Wikipedia and filtering 
 out the html tags. I created a large vector of tuples of languages ("en", "English"), and by constructing
-a url out of the language abbreviation content in different languages can be requested from Wikipedia.
+a url out of the language abbreviations, content in different languages can be requested from Wikipedia.
 I then randomly get a page, then get the content from the page. I split the strings into a vector, then
 return the longest string from the vector. This creates strings of widely varying lengths: I choose the 
 longest to avoid getting strings that are far too short. Some languages have many very short pages
@@ -99,15 +99,22 @@ increments the incorrect counter and changes the text on the button.
 
 I did a lot of testing during development. Much of it was to make sure that strings were correct and, the 
 random selection was occurring correctly and there were no errors in changing languages. I have some of 
-these tests at the bottom of my main.rs file. I also did a great of testing with the graphics, though 
+these tests at the bottom of my main.rs file. I also did a lot of testing with the graphics, though 
 I am less sure about how to write that out as tests in my main.rs file. Much of that testing involved
-compiling and running to see how things looked and operated in the game window.
+compiling and running to see how things looked and reacted to input in the game window.
 
 The main thing I would like to add to the game would be the option to take the displayed text and run it through
 Google Translate or something else. It wouldn't be a perfect translation, but it would be cool to see a guess
 at the English translation of the displayed text. I also was disappointed that my Truncate code was occasionally
 causing the program to panic. I think this *may* be able to be fixed by checking to see if the result from Truncate
 would cause a panic, and continuing to generate new text until it doesn't panic from a character misalignment.
+
+One change that I may make is to group languages into families of similar languages, in order to
+make the guessing options more similar. For example, a text displayed in French could have French, Italian, 
+Spanish and Catalan (Romance languages) as guessing options. This would increase the difficulty and require more
+familiarity with the languages. I could make this change by changing how the code selects language tuples: 
+instead of randomly picking from all 50 languages, it could first pick a group, then select languages from the
+group.
 
 I'm pretty happy with the results! I think it looks deceptively basic, since there was a lot of effort put into
 making sure that things were correct with the text and the graphics. I kind of naively thought that it would be
